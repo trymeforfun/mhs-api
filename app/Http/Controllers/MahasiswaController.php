@@ -53,12 +53,11 @@ class MahasiswaController extends Controller
     
     }
         
-    public function destroy($id)
+    public function destroy(Mahasiswa $mahasiswa)
     {
-        $data = Mahasiswa::where('id',$id)->first();
-        $data->delete();
+        $mahasiswa->delete();
     
-        return response()->json($data);
+        return 'data has been deleted';
         
     }
     //

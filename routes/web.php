@@ -19,4 +19,4 @@ $router->get('/mahasiswa', 'MahasiswaController@index');
 $router->get('/mahasiswa/{id}', 'MahasiswaCOntroller@show');
 $router->post('/mahasiswa', 'MahasiswaCOntroller@store');
 $router->put('/mahasiswa/{id}', 'MahasiswaCOntroller@update');
-$router->delete('/mahasiswa/{id}', 'MahasiswaCOntroller@destroy');
+$router->delete('/mahasiswa/{mahasiswa}', 'MahasiswaCOntroller@destroy');
