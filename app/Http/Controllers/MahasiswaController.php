@@ -19,7 +19,7 @@ class MahasiswaController extends Controller
     
     public function index()
     {
-        $dataMhs = Mahasiswa::all();
+        $dataMhs = Mahasiswa::get();
         return response()->json($dataMhs);
         
     }
