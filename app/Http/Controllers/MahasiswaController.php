@@ -49,6 +49,12 @@ class MahasiswaController extends Controller
 
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'nama' => 'required|min:5',
+            'nim' => 'required', 'number',
+            'email' => 'required',
+        ]);
+
         $data = Mahasiswa::where('id',$id)->first();
         $data->nama = $request->input('nama');
         $data->nim = $request->input('nim');
